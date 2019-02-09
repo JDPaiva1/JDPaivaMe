@@ -1,0 +1,30 @@
+p.text-faded {
+  > a {
+  color: rgba(255,255,255,.7);
+  }
+}
+.progress-title {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.progress {
+  height: 30px;
+  border-radius: 0;
+  > .progress-bar {
+    background: $secondary;
+  }
+  > .progress-bar-skill1 {
+    background: $secondary;
+  }
+  > .progress-bar-skill2 {
+    background: $secondary;
+  }
+  > .progress-bar-skill3 {
+    background: $secondary;
+  }
+  > .progress-bar-skill4 {
+    background: $secondary;
+  }
+}

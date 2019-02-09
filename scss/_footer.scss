@@ -1,0 +1,30 @@
+footer.main-footer {
+  padding: 60px 0;
+  background: $primary;
+}
+
+footer.main-footer p.social a {
+  margin-left: 10px;
+  color: $primary;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  line-height: 45px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+footer.main-footer p.social a {
+  background-color: $white;
+}
+
+footer.main-footer p {
+  margin: 0;
+  color: $white;
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9rem;
+}
