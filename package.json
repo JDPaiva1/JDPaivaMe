@@ -1,10 +1,10 @@
 {
     "title": "JDPaiva1",
     "name": "jdpaiva.me",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Web portfolio of JDPaiva1",
-    "homepage": "jdpaiva.me",
-    "author": "Jose Daniel Paiva (http://jdpaiva.me/)",
+    "homepage": "https://jdpaiva.me",
+    "author": "Jose Daniel Paiva (https://jdpaiva.me/)",
     "repository": {
         "type": "git",
         "url": ""
