@@ -110,7 +110,7 @@ gulp.task('html:minify', function() {
       collapseWhitespace: true,
       removeComments: true
     }))
-    .pipe(gulp.dest('./dist'))
+    .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream());
 });
 
