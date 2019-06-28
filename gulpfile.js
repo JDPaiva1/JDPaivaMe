@@ -104,6 +104,8 @@ gulp.task('js', ['js:minify']);
 gulp.task('html:minify', function() {
   return gulp.src([
     './index.html',
+    './en.html',
+    '!./en.min.html',
     '!./index.min.html'
   ])
     .pipe(htmlmin({ 

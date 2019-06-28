@@ -25,7 +25,7 @@
         &:hover {
           color: $primary;
         }
-        &.active {
+        &.active, &.language-active {
           color: $primary !important;
           background-color: transparent;
           &:hover {

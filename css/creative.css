@@ -1,5 +1,5 @@
 /*!
- * JDPaiva1 v2.0.4 (https://jdpaiva.me)
+ * JDPaiva1 v2.1.0 (https://jdpaiva.me)
  * Copyright 2019-2019 Jose Daniel Paiva (https://jdpaiva.me/)
  */
 
@@ -121,14 +121,16 @@ img::-moz-selection {
   color: #f05a28;
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active, #mainNav .navbar-nav > li.nav-item > a.nav-link.language-active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.language-active {
   color: #f05a28 !important;
   background-color: transparent;
 }
 
-#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover,
-#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover {
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover, #mainNav .navbar-nav > li.nav-item > a.nav-link.language-active:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active:hover,
+#mainNav .navbar-nav > li.nav-item > a.nav-link:focus.language-active:hover {
   background-color: transparent;
 }
 
