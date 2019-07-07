@@ -104,8 +104,6 @@ gulp.task('js', ['js:minify']);
 gulp.task('html:minify', function() {
   return gulp.src([
     './index.html',
-    './en.html',
-    '!./en.min.html',
     '!./index.min.html'
   ])
     .pipe(htmlmin({ 
@@ -115,9 +113,21 @@ gulp.task('html:minify', function() {
     .pipe(gulp.dest('./docs'))
     .pipe(browserSync.stream());
 });
+gulp.task('enhtml:minify', function() {
+  return gulp.src([
+    './en/index.html',
+    '!./en/index.min.html',
+  ])
+    .pipe(htmlmin({ 
+      collapseWhitespace: true,
+      removeComments: true
+    }))
+    .pipe(gulp.dest('./docs/en'))
+    .pipe(browserSync.stream());
+});
 
 // HTML
-gulp.task('html', ['html:minify']);
+gulp.task('html', ['html:minify', 'enhtml:minify']);
 
 // Default task
 gulp.task('default', ['html', 'css', 'js', 'vendor']);
