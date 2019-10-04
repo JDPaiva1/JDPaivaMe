@@ -12,7 +12,7 @@ const browserSync = require('browser-sync').create();
 // Set the banner content
 var banner = ['/*!\n',
   ' * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2019-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
+  ' * Copyright 2018-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
   ' */\n',
   '\n'
 ].join('');
