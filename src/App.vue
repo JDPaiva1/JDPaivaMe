@@ -1,0 +1,61 @@
+<template>
+  <div id="app" v-if="data != ''">
+    <Navigation :navbar="data.main.navbar"/>
+    <Masthead :main="data.main"/>
+    <section
+      class="p-0"
+      v-scroll-spy="{offset: 55, allowNoActive: true, time: 1000, steps: 30}">
+      <About :about="data.about"/>
+      <Services :services="data.services"/>
+      <Portfolio :portfolio="data.portfolio"/>
+      <Contact :contact="data.contact"/>
+    </section>
+    <FooterNav/>
+  </div>
+</template>
+
+<script>
+import Navigation from './components/Navigation.vue';
+import Masthead from './components/Masthead.vue';
+import About from './components/About.vue';
+import Services from './components/Services.vue';
+import Portfolio from './components/Portfolio.vue';
+import Contact from './components/Contact.vue';
+import FooterNav from './components/FooterNav.vue';
+
+import { db } from '../config/firebase';
+
+export default {
+  name: 'app',
+  components: {
+    Navigation,
+    Masthead,
+    About,
+    Services,
+    Portfolio,
+    Contact,
+    FooterNav,
+  },
+  data() {
+    return {
+      data: '',
+    };
+  },
+  methods: {
+    readDatabase() {
+      db.ref('es/').once('value', (snapshot) => {
+        this.data = snapshot.val();
+      });
+    },
+  },
+  created() {
+    this.readDatabase();
+  },
+};
+</script>
+
+<style lang="scss">
+#app {
+  position: relative !important;
+}
+</style>
