@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="row">
+      <div class="row" ref="srIcon">
         <div
           class="col-lg-3 col-md-6 text-center"
           v-for="(service, index) in services.service"
@@ -17,7 +17,8 @@
           <div class="service-box mt-5 mx-auto">
             <font-awesome-icon
               :icon="[service.icon.type, service.icon.name]"
-              class="fa-4x text-primary mb-3 sr-icon-2"/>
+              class="text-primary mb-3 sr-icon"
+              :class="[{'active': isActive}, addClass(index)]"/>
             <h3 class="mb-3">{{ service.title }}</h3>
             <!-- <p class="text-muted mb-0"></p> -->
           </div>
@@ -33,6 +34,29 @@ export default {
   props: {
     services: Object,
   },
+  data() {
+    return {
+      observer: null,
+      options: {
+        threshold: 1,
+      },
+      isActive: false,
+    };
+  },
+  methods: {
+    addClass(index) {
+      return `sr-icon-${index + 1}`;
+    },
+    callback(entries) {
+      if (entries[0].isIntersecting) {
+        this.isActive = true;
+      }
+    },
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(this.callback, this.options);
+    this.observer.observe(this.$refs.srIcon);
+  },
 };
 </script>
 
@@ -40,6 +64,26 @@ export default {
 section#services {
   .service-box {
     max-width: 400px;
+    .sr-icon {
+      opacity: .1;
+      font-size: .1em;
+      &.active {
+        opacity: 1;
+        font-size: 4em;
+      }
+      &-1 {
+        transition: opacity 2s .2s, font-size 2s .2s;
+      }
+      &-2 {
+        transition: opacity 2s .4s, font-size 2s .4s;
+      }
+      &-3 {
+        transition: opacity 2s .6s, font-size 2s .6s;
+      }
+      &-4 {
+        transition: opacity 2s .8s, font-size 2s .8s;
+      }
+    }
   }
 }
 </style>

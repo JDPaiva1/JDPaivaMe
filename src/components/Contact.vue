@@ -10,7 +10,11 @@
       </div>
       <div class="row">
         <div class="col-lg-4 mx-auto text-center">
-          <font-awesome-icon :icon="['fas', 'envelope']" class="fa-3x mb-3 sr-contact-2"/>
+          <font-awesome-icon
+            ref="srContact"
+            :icon="['fas', 'envelope']"
+            class="mb-3 sr-contact"
+            :class="{'active': isActive}"/>
           <p>
             <a :href="`mailto:${contact.email}`">{{ contact.email }}</a>
           </p>
@@ -26,11 +30,44 @@ export default {
   props: {
     contact: Object,
   },
+  data() {
+    return {
+      observer: null,
+      options: {
+        threshold: 1,
+      },
+      isActive: false,
+    };
+  },
+  methods: {
+    callback(entries) {
+      if (entries[0].isIntersecting) {
+        this.isActive = true;
+      }
+    },
+  },
+  mounted() {
+    this.observer = new IntersectionObserver(this.callback, this.options);
+    this.observer.observe(this.$refs.srContact);
+  },
 };
 </script>
 
 <style lang="scss">
-div.col-lg-4.mx-auto.text-center a {
-  color: $primary;
+section#contact {
+  div.col-lg-4.mx-auto.text-center {
+    .sr-contact {
+      opacity: .1;
+      font-size: .1em;
+      transition: opacity 2s .4s, font-size 4s .4s;
+      &.active {
+        opacity: 1;
+        font-size: 3em;
+      }
+    }
+    a {
+      color: $primary;
+    }
+  }
 }
 </style>
