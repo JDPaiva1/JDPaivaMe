@@ -12,14 +12,13 @@ import Scrollspy, { Easing } from 'vue2-scrollspy';
 
 import App from './App.vue';
 
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import 'lazysizes';
 
 Vue.config.productionTip = false;
 library.add(faCode, faMobileAlt, faPencilAlt, faWordpress,
   faGithub, faLinkedinIn, faTwitter, faInstagram, fa500px, faEnvelope);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 Vue.use(Scrollspy, { easing: Easing.Circular.InOut });
 
 new Vue({

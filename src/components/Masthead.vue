@@ -27,7 +27,15 @@ export default {
   },
   computed: {
     backgroundImg() {
-      return `background-image: url(${this.main.background})`;
+      const browserDetection = browser => navigator.userAgent.search(browser);
+      const detectionSafari = browserDetection('Safari') >= 0 && browserDetection('Chrome') < 0;
+      let background = '';
+      if (detectionSafari || browserDetection('MSIE') >= 0) {
+        background = this.main.altBackground;
+      } else {
+        background = this.main.background;
+      }
+      return `background-image: url(${background})`;
     },
   },
 };

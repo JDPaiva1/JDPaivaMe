@@ -11,7 +11,9 @@
                 Soy Jose Daniel Paiva un joven programador venezolano amante de la tecnología,
                 con ganas de aprender algo nuevo todos los días,
                 estudiante de Platzi
-                <a href="https://platzi.com/@jdpaiva1/" target="_blank"><strong>(ver mi perfil aquí).</strong></a>
+                <a href="https://platzi.com/@jdpaiva1/" target="_blank" rel="noopener">
+                  <strong>(ver mi perfil aquí).</strong>
+                </a>
               </p>
               <p class="text-faded mb-4">
                 Tengo un año de experiencia en el desarrollo de aplicaciones webs.
@@ -21,7 +23,9 @@
               </p>
               <p class="text-faded mb-4">
                 En mi tiempo libre suelo tomar fotos y subirlas a
-                <a href="https://www.instagram.com/jdpaiva1/" target="_blank"><strong> mi Instagram.</strong></a>
+                <a href="https://www.instagram.com/jdpaiva1/" target="_blank" rel="noopener">
+                  <strong> mi Instagram.</strong>
+                </a>
               </p>
             </div>
             <div class="col-lg-6">
@@ -38,7 +42,11 @@
               </div>
             </div>
             <div class="col-sm-6 mx-auto mt-5">
-              <a class="btn btn-light btn-xl mb-5" href="https://www.linkedin.com/in/jdpaiva1/"  target="_blank">
+              <a
+                class="btn btn-light btn-xl mb-5"
+                href="https://www.linkedin.com/in/jdpaiva1/"
+                target="_blank"
+                rel="noopener">
                 {{ about.button }}
               </a>
               <img

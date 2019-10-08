@@ -6,6 +6,7 @@ body, html{
   height: 100%;
 }
 body {
+  font-display: auto;
   @include serif-font;
 }
 

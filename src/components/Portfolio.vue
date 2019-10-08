@@ -8,7 +8,9 @@
           :key="index"
           class="col-lg-4 col-sm-6">
           <a
-            class="portfolio-box" target="_blank"
+            class="portfolio-box"
+            target="_blank"
+            rel="noopener"
             :href="project.url">
             <img
               class="lazyload img-fluid"
