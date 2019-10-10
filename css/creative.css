@@ -1,5 +1,5 @@
 /*!
- * JDPaiva1 v2.2.0 (https://jdpaiva.me)
+ * JDPaiva1 v2.2.1 (https://jdpaiva.me)
  * Copyright 2018-2019 Jose Daniel Paiva (https://jdpaiva.me/)
  */
 
