@@ -67,21 +67,22 @@ section#services {
     .sr-icon {
       opacity: .1;
       font-size: .1em;
+      transition: opacity 1s, font-size 1s;
       &.active {
         opacity: 1;
         font-size: 4em;
       }
       &-1 {
-        transition: opacity 2s .2s, font-size 2s .2s;
+        transition-delay: .2s;
       }
       &-2 {
-        transition: opacity 2s .4s, font-size 2s .4s;
+        transition-delay: .4s;
       }
       &-3 {
-        transition: opacity 2s .6s, font-size 2s .6s;
+        transition-delay: .6s;
       }
       &-4 {
-        transition: opacity 2s .8s, font-size 2s .8s;
+        transition-delay: .8s;
       }
     }
   }

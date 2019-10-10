@@ -3,7 +3,9 @@
     class="navbar navbar-expand-lg navbar-light fixed-top"
     :class="{'navbar-shrink': isActive}" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#app">JDPaiva1</a>
+      <a class="navbar-brand" href="#app">
+        JDPaiva1
+      </a>
       <button
         class="navbar-toggler navbar-toggler-right"
         type="button" data-toggle="collapse"
@@ -46,12 +48,14 @@ export default {
   data() {
     return {
       isActive: false,
+      widthLogo: 100,
     };
   },
   methods: {
     handleScroll() {
       if (window.scrollY >= 100) {
         this.isActive = true;
+        this.widthLogo = 31;
       } else {
         this.isActive = false;
       }
@@ -77,15 +81,13 @@ export default {
     text-transform: uppercase;
     color: $primary;
     @include sans-serif-font;
-    &:focus,
-    &:hover {
+    &:focus, &:hover {
       color: darken($primary, .1);
     }
   }
   .navbar-nav {
     > li.nav-item {
-       > a.nav-link,
-      > a.nav-link:focus {
+       > a.nav-link, > a.nav-link:focus {
         font-size: .9rem;
         font-weight: 700;
         text-transform: uppercase;
@@ -108,8 +110,7 @@ export default {
     background-color: transparent;
     .navbar-brand {
       color: fade-out($white, .3);
-      &:focus,
-      &:hover {
+      &:focus, &:hover {
         color: $white;
       }
     }
@@ -128,8 +129,7 @@ export default {
       background-color: $white;
       .navbar-brand {
         color: $primary;
-        &:focus,
-        &:hover {
+        &:focus, &:hover {
           color: darken($primary, .1);
         }
       }

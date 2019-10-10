@@ -1,8 +1,9 @@
 <template>
-  <header class="masthead text-center text-white d-flex" :style="backgroundImg">
+  <header class="masthead text-center text-white d-flex" :style="defineBackgroundImg">
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
+          <img class="mb-4" :src="main.logoPNG" :srcset="main.logoSVG" alt="logotipo" width="100"/>
           <h1 class="text-uppercase">
             <strong>{{ main.name }}</strong>
           </h1>
@@ -26,16 +27,16 @@ export default {
     main: Object,
   },
   computed: {
-    backgroundImg() {
+    defineBackgroundImg() {
       const browserDetection = browser => navigator.userAgent.search(browser);
       const detectionSafari = browserDetection('Safari') >= 0 && browserDetection('Chrome') < 0;
-      let background = '';
+      let backgroundImg = '';
       if (detectionSafari || browserDetection('MSIE') >= 0) {
-        background = this.main.altBackground;
+        backgroundImg = this.main.altBackground;
       } else {
-        background = this.main.background;
+        backgroundImg = this.main.background;
       }
-      return `background-image: url(${background})`;
+      return `background-image: url(${backgroundImg})`;
     },
   },
 };
@@ -43,7 +44,7 @@ export default {
 
 <style lang="scss">
 header.masthead {
-  padding-top: 10rem;
+  padding-top: 6rem;
   padding-bottom: calc(10rem - 56px);
   background-position: center center;
   @include background-cover;

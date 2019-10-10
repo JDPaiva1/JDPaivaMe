@@ -1,6 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/database';
-import 'firebase/storage';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyA4Q8HzJKkPVGvXQxUvf4mp4x1g5F_12Jc',
@@ -16,16 +15,5 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
-const storage = firebase.storage();
 
-export { firebase, db, storage };
-
-// < !--The core Firebase JS SDK is always required and must be listed first-- >
-// <script src="/__/firebase/7.1.0/firebase-app.js"></script>
-
-// <!--TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries -->
-// <script src="/__/firebase/7.1.0/firebase-analytics.js"></script>
-
-// <!--Initialize Firebase-- >
-// <script src="/__/firebase/init.js"></script>
+export { firebase, db };

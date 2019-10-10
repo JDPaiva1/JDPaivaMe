@@ -8,23 +8,18 @@
           <div class="row">
             <div class="col-lg-6">
               <p class="text-faded mb-4 mt-4">
-                Soy Jose Daniel Paiva un joven programador venezolano amante de la tecnología,
-                con ganas de aprender algo nuevo todos los días,
-                estudiante de Platzi
+                {{ about.textTop }}
                 <a href="https://platzi.com/@jdpaiva1/" target="_blank" rel="noopener">
-                  <strong>(ver mi perfil aquí).</strong>
+                  <strong>{{ about.anchorTop }}</strong>
                 </a>
               </p>
               <p class="text-faded mb-4">
-                Tengo un año de experiencia en el desarrollo de aplicaciones webs.
-                Desarrollo principalmente en JavaScript,
-                también manejo PHP y trabajo con tecnologías como Vue.js,
-                React.js, Node.js, Firebase y WordPress.
+                {{ about.textMiddle }}
               </p>
               <p class="text-faded mb-4">
-                En mi tiempo libre suelo tomar fotos y subirlas a
+                {{ about.textBottom }}
                 <a href="https://www.instagram.com/jdpaiva1/" target="_blank" rel="noopener">
-                  <strong> mi Instagram.</strong>
+                  <strong>{{ about.anchorBottom }}</strong>
                 </a>
               </p>
             </div>
