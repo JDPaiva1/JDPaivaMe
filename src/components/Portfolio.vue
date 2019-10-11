@@ -11,6 +11,7 @@
             class="portfolio-box"
             target="_blank"
             rel="noopener"
+            :aria-label="project.alt"
             :href="project.url">
             <img
               class="lazyload img-fluid"

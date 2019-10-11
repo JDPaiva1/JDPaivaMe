@@ -32,9 +32,9 @@ export default {
       const detectionSafari = browserDetection('Safari') >= 0 && browserDetection('Chrome') < 0;
       let backgroundImg = '';
       if (detectionSafari || browserDetection('MSIE') >= 0) {
-        backgroundImg = this.main.altBackground;
+        backgroundImg = this.main.backgroundJPG;
       } else {
-        backgroundImg = this.main.background;
+        backgroundImg = this.main.backgroundWebp;
       }
       return `background-image: url(${backgroundImg})`;
     },

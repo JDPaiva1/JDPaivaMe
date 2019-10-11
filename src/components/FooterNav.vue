@@ -4,19 +4,19 @@
       <div class="row">
         <div class="col-md-6 text-center text-lg-left">
           <p class="social">
-            <a href="https://www.linkedin.com/in/jdpaiva1/">
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/in/jdpaiva1/">
               <font-awesome-icon :icon="['fab', 'linkedin-in']"/>
             </a>
-            <a href="https://github.com/JDPaiva1">
+            <a aria-label="GitHub" href="https://github.com/JDPaiva1">
               <font-awesome-icon :icon="['fab', 'github']"/>
             </a>
-            <a href="https://twitter.com/JDPaiva1">
+            <a aria-label="Twitter" href="https://twitter.com/JDPaiva1">
               <font-awesome-icon :icon="['fab', 'twitter']"/>
             </a>
-            <a href="https://www.instagram.com/jdpaiva1/">
+            <a aria-label="Instagram" href="https://www.instagram.com/jdpaiva1/">
               <font-awesome-icon :icon="['fab', 'instagram']"/>
             </a>
-            <a href="https://500px.com/jdpaiva1">
+            <a aria-label="500px" href="https://500px.com/jdpaiva1">
               <font-awesome-icon :icon="['fab', '500px']"/>
             </a>
           </p>

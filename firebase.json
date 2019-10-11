@@ -11,10 +11,11 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "*/en{,/**}",
+        "destination": "index.html"
       }
-    ]
+    ],
+    "cleanUrls": true
   },
   "storage": {
     "rules": "storage.rules"

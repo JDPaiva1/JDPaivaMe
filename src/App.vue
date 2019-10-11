@@ -2,7 +2,7 @@
   <div id="app">
     <Loader v-if="data === ''"/>
     <template v-else-if="data != ''">
-      <Navigation :navbar="data.main.navbar"/>
+      <Navigation :navbar="data.main.navbar" :path="path"/>
       <Masthead :main="data.main"/>
       <section
         class="p-0"
@@ -44,11 +44,14 @@ export default {
   data() {
     return {
       data: '',
+      path: window.location.pathname,
+      reference: 'es/',
     };
   },
   methods: {
     readDatabase() {
-      db.ref('es/').once('value', (snapshot) => {
+      this.reference = this.path === '/' ? 'es/' : 'en/';
+      db.ref(this.reference).once('value', (snapshot) => {
         this.data = snapshot.val();
       });
     },

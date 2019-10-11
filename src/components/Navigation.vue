@@ -29,9 +29,19 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link d-inline-block pr-1 language-active" href="./">ES</a>
+            <a
+              class="nav-link d-inline-block pr-1"
+              :class="[path === '/' ? languageActive : '']"
+              :href="origin">
+              ES
+            </a>
             <strong class="nav-link d-inline-block p-0">/</strong>
-            <a class="nav-link d-inline-block pl-1" href="./en/">EN</a>
+            <a
+              class="nav-link d-inline-block pl-1"
+              :class="[path != '/' ? languageActive : '']"
+              :href="`${origin}/en/`">
+              EN
+            </a>
           </li>
         </ul>
       </div>
@@ -44,11 +54,14 @@ export default {
   name: 'Navigation',
   props: {
     navbar: Object,
+    path: String,
   },
   data() {
     return {
       isActive: false,
       widthLogo: 100,
+      languageActive: 'language-active',
+      origin: window.location.origin,
     };
   },
   methods: {
