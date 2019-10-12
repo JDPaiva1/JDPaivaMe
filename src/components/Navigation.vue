@@ -10,12 +10,13 @@
         class="navbar-toggler navbar-toggler-right"
         type="button" data-toggle="collapse"
         data-target="#navbarResponsive"
+        :aria-expanded="`${ariaExpanded}`"
         aria-controls="navbarResponsive"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+        aria-label="Toggle navigation"
+        @click="toggleButton">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="collapse navbar-collapse" :class="{ show: ariaExpanded }" id="navbarResponsive">
         <ul
           class="navbar-nav ml-auto"
           v-scroll-spy-active="{selector: 'a.nav-link'}"
@@ -24,7 +25,9 @@
             v-for="(item, index) in navbar.items"
             :key="index"
             class="nav-item">
-            <a class="nav-link" :href="item.ref">{{item.title}}</a>
+            <a class="nav-link" :href="item.ref" @click="removeHash">
+              {{item.title}}
+            </a>
           </li>
         </ul>
         <ul class="navbar-nav">
@@ -62,6 +65,7 @@ export default {
       widthLogo: 100,
       languageActive: 'language-active',
       origin: window.location.origin,
+      ariaExpanded: false,
     };
   },
   methods: {
@@ -71,6 +75,18 @@ export default {
         this.widthLogo = 31;
       } else {
         this.isActive = false;
+      }
+    },
+    removeHash() {
+      window.onhashchange = () => {
+        window.history.pushState('', document.title, window.location.pathname);
+      };
+    },
+    toggleButton() {
+      if (this.ariaExpanded) {
+        this.ariaExpanded = false;
+      } else {
+        this.ariaExpanded = true;
       }
     },
   },
@@ -105,6 +121,7 @@ export default {
         font-weight: 700;
         text-transform: uppercase;
         color: $gray-900;
+        text-decoration: none;
         &:hover {
           color: $primary;
         }

@@ -5,7 +5,7 @@ module.exports = {
     loaderOptions: {
       scss: {
         // eslint-disable-next-line
-        data: `@import "~@/scss/global.scss";`,
+        data: `@import "~@/scss/custom.scss";`,
       },
     },
   },
