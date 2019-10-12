@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "title": "JDPaiva1",
     "name": "jdpaiva.me",
     "version": "2.2.1",
@@ -25,5 +26,69 @@
         "gulp-rename": "1.4.0",
         "gulp-sass": "4.0.1",
         "gulp-uglify": "3.0.1"
+=======
+  "title": "JDPaiva1",
+  "name": "jdpaiva.me",
+  "version": "3.2.4",
+  "description": "Web portfolio of JDPaiva1",
+  "homepage": "https://jdpaiva.me",
+  "author": "Jose Daniel Paiva (https://jdpaiva.me/)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JDPaiva1/Me"
+  },
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/vue-fontawesome": "^0.1.7",
+    "bootstrap": "^4.3.1",
+    "core-js": "^2.6.5",
+    "firebase": "^7.1.0",
+    "jquery": "^3.4.1",
+    "lazysizes": "^5.1.2",
+    "popper.js": "^1.15.0",
+    "vue": "^2.6.10",
+    "vue2-scrollspy": "^2.3.1"
+  },
+  "devDependencies": {
+    "@vue/babel-preset-app": "^3.11.0",
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "style-resources-loader": "^1.2.1",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+>>>>>>> FirebaseAndVue
     }
+  },
+  "postcss": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

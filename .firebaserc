@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "jdpaiva1-me"
+  },
+  "targets": {
+    "jdpaiva1-me": {
+      "hosting": {
+        "es": [
+          "jdpaiva1-me"
+        ],
+        "en": [
+          "en-jdpaiva1-me"
+        ]
+      }
+    }
+  }
+}
