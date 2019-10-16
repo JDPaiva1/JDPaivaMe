@@ -18,6 +18,10 @@
 </template>
 
 <script>
+import firebase from 'firebase/app';
+import 'firebase/analytics';
+import 'firebase/database';
+
 import Loader from './components/Loader.vue';
 import Navigation from './components/Navigation.vue';
 import Masthead from './components/Masthead.vue';
@@ -27,7 +31,16 @@ import Portfolio from './components/Portfolio.vue';
 import Contact from './components/Contact.vue';
 import FooterNav from './components/FooterNav.vue';
 
-import { db } from '../config/firebase';
+const firebaseConfig = {
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
+  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID,
+};
 
 export default {
   name: 'app',
@@ -51,12 +64,14 @@ export default {
   methods: {
     readDatabase() {
       this.reference = this.path === '/' ? 'es/' : 'en/';
-      db.ref(this.reference).once('value', (snapshot) => {
+      firebase.database().ref(this.reference).once('value', (snapshot) => {
         this.data = snapshot.val();
       });
     },
   },
   created() {
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
     this.readDatabase();
   },
 };
