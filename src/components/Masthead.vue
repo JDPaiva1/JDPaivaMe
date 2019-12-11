@@ -3,7 +3,7 @@
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <img class="mb-4" :src="main.logoPNG" :srcset="main.logoSVG" alt="logotipo" width="100"/>
+          <img class="mb-4" :src="main.logoSVG" alt="logotipo" width="100"/>
           <h1 class="text-uppercase">
             <strong>{{ main.name }}</strong>
           </h1>
