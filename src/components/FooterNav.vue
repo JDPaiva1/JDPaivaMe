@@ -22,7 +22,7 @@
           </p>
         </div>
         <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0 text-faded">
-          <p>© 2019 JDPaiva1.</p>
+          <p>© JDPaiva1.</p>
         </div>
       </div>
     </div>
