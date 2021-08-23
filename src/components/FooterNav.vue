@@ -16,9 +16,6 @@
             <a aria-label="Instagram" href="https://www.instagram.com/jdpaiva1/">
               <font-awesome-icon :icon="['fab', 'instagram']"/>
             </a>
-            <a aria-label="500px" href="https://500px.com/jdpaiva1">
-              <font-awesome-icon :icon="['fab', '500px']"/>
-            </a>
           </p>
         </div>
         <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0 text-faded">
