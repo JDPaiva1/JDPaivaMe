@@ -2,18 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html {
+  /* font-family: 'Inter', sans-serif; */
+  @apply bg-white;
+}
+body {
+  /* font-family: 'Inter', sans-serif; */
+  /* font-style: normal; */
+  @apply bg-white overflow-x-hidden font-normal text-grey text-sm;
+}
+/* @font-face {
+  font-family: 'Inter', sans-serif;
+} */
 
-  font-weight: normal;
+a,
+a:hover,
+a:focus,
+i,
+input,
+button,
+input:focus,
+.transition {
+  /* outline: none; */
+  @apply no-underline outline-none transition-all duration-400 ease-in-out delay-0 shadow-none;
+}
+a {
+  @apply text-black;
 }
 
-@media (min-width: 1024px) {
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+::-moz-selection,
+::selection {
+  /* text-shadow: none; */
+  @apply bg-black text-white;
+}
+
+img {
+  /* outline: none; */
+  @apply max-w-full h-auto border-none;
+}
+
+ul {
+  @apply p-0 m-0;
+}
+
+/* 1.2 Typography */
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+} */
+
+figure {
+  @apply m-0;
+}
+svg,
+img {
+  @apply max-w-full h-auto;
+}
+
+.c-container {
+  @apply w-full mx-auto px-5 md:px-3;
+}
+
+@media (min-width: 768px) {
+  .c-container {
+    max-width: 720px;
   }
+}
+
+@media (min-width: 992px) {
+  .c-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .c-container {
+    max-width: 1320px;
+  }
+}
+
+.heading {
+  @apply inline-block font-bold text-black uppercase tracking-[1px] text-base mb-[23px] pb-[7px] border-b-[3px] border-b-primary border-solid;
+}
+.button {
+  @apply inline-block uppercase text-xs leading-[13px] font-semibold tracking-[3px] text-primary px-2.5 md:px-[30px] py-[11px] md:py-[17px] rounded-[60px] border-2 border-solid border-primary;
+}
+.button:hover {
+  @apply bg-primary text-white;
 }
