@@ -1,0 +1,34 @@
+{
+  "atDirectives": [
+    {
+      "name": "@tailwind",
+      "description": "Use the @tailwind directive to insert Tailwind’s `base`, `components`, `utilities`, and `screens` styles into your CSS.",
+      "references": [
+        {
+          "name": "Tailwind’s “Functions & Directives” documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives/#tailwind"
+        }
+      ]
+    },
+    {
+      "name": "@screen",
+      "description": "The @screen function allows you to create media queries that reference your breakpoints by name instead of duplicating their values in your own CSS.",
+      "references": [
+        {
+          "name": "Tailwind Documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#screen"
+        }
+      ]
+    },
+    {
+      "name": "@apply",
+      "description": "Use @apply to inline any existing utility classes into your own custom CSS.",
+      "references": [
+        {
+          "name": "Tailwind Documentation",
+          "url": "https://tailwindcss.com/docs/functions-and-directives#apply"
+        }
+      ]
+    }
+  ]
+}
