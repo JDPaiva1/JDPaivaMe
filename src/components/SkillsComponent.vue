@@ -29,18 +29,18 @@
 
 <style scoped>
 .skills {
-  @apply pb-[105px] flex flex-wrap;
+  @apply md:pb-24 flex flex-wrap;
 }
 
 .skills-container {
-  @apply mb-10 md:mb-0 w-full pr-4 pl-4 md:w-1/2 lg:w-1/2 xl:w-1/2;
+  @apply mb-10 md:mb-0 w-full md:pr-4 last:pr-0 md:pl-4 first:pl-0 md:w-1/2;
 }
 
 .skills-list {
-  @apply flex flex-wrap items-center mt-[11px] m-0 p-0;
+  @apply flex flex-wrap items-center mt-3 m-0 p-0;
 }
 
 .skills-list li {
-  @apply inline-block text-grey text-base bg-white border font-medium mr-[15px] mb-[15px] px-5 py-2.5 rounded-[27px] border-solid border-[#D7D7D7];
+  @apply inline-block text-grey-900 text-base bg-white border font-medium mr-4 mb-4 px-5 py-2.5 rounded-full border-solid border-grey-100;
 }
 </style>

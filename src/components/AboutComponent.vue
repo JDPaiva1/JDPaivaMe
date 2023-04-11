@@ -17,11 +17,11 @@
 
 <style scoped>
 .about {
-  @apply pt-[60px] pb-[60px] md:pb-[120px];
+  @apply py-16 md:pb-28;
 }
 
 .about p {
-  @apply text-grey text-[15px] md:text-2xl leading-[30px] md:leading-10 font-light mb-[30px] md:mb-[60px];
+  @apply text-grey-900 text-base md:text-2xl leading-8 md:leading-10 font-light mb-8 md:mb-16;
 }
 
 .about-arrow-button i {

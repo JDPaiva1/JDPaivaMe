@@ -1,33 +1,34 @@
 <template>
   <div class="banner">
-    <div class="w-full pr-4 pl-4 lg:pl-0 md:w-2/5 lg:w-2/5 xl:w-2/5">
+    <div class="banner-img-section">
       <figure>
         <img
-          src="https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/about.jpg?alt=media&token=50bcdabe-d36d-4ff5-805a-6ec1bbc41c2f">
+          class="banner-img"
+          src="https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/p1.jpg?alt=media&token=bd6a9290-c686-49fb-ba90-6a80f2ff300e"
+          loading="lazy"
+        />
       </figure>
     </div>
-    <div class="w-full pr-4 pl-4 md:w-3/5 lg:w-3/5 xl:w-3/5">
-      <section>
-        <h1>
-          <span>HI THERE</span>
-          I’m Jose Daniel Paiva <br/> FrontEnd Developer based in Spain.
-        </h1>
-        <ul class="banner-numbervalulist">
-          <li>
-            <strong>6+</strong>
-            <span>Experience</span>
-          </li>
-          <li>
-            <strong>89</strong>
-            <span>Projects</span>
-          </li>
-          <li>
-            <strong>52</strong>
-            <span>Happy Clients</span>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <section class="banner-text-section">
+      <h1 class="banner-title">
+        <span>HI THERE</span>
+        I’m Jose Daniel Paiva <br /> FrontEnd Developer based in Spain.
+      </h1>
+      <ul class="banner-numbervalulist">
+        <li>
+          <strong>6+</strong>
+          <span>Experience</span>
+        </li>
+        <li>
+          <strong>89</strong>
+          <span>Projects</span>
+        </li>
+        <li>
+          <strong>52</strong>
+          <span>Happy Clients</span>
+        </li>
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -35,27 +36,33 @@
 .banner {
   @apply flex flex-wrap mt-24 md:mt-[168px];
 }
+.banner-img-section {
+  @apply w-full md:w-2/5 md:pr-3;
+}
 .banner figure {
-  @apply py-[30px] md:py-0;
+  @apply py-8 md:py-0 w-full;
 }
-.banner section {
-  @apply px-0 md:pl-[70px] md:pr-[100px] lg:pr-0;
+.banner-img {
+  @apply object-cover aspect-[0.876] rounded-3xl;
+}
+.banner-text-section {
+  @apply w-full md:w-3/5 px-0 md:pl-20 md:pr-28;
 }
 
-.banner section h1 span {
-  @apply block uppercase tracking-[1px] font-medium text-base pb-0 md:pb-8;
+.banner-title span {
+  @apply block uppercase tracking-wider font-medium text-base pb-2 md:pt-5 md:pb-11 md:leading-snug;
 }
 
-.banner section h1 {
-  @apply font-semibold text-3xl md:text-5xl leading-10 md:leading-[60px] text-black;
+.banner-title {
+  @apply font-semibold text-3xl md:text-5xl leading-10 md:leading-tight text-black;
 }
 
 .banner-numbervalulist {
-  @apply flex items-center flex-wrap mt-5 md:mt-[60px] m-0 p-0;
+  @apply flex items-center flex-wrap mt-5 md:mt-16 m-0 p-0;
 }
 
 .banner-numbervalulist li {
-  @apply mr-[30px] md:mr-[60px];
+  @apply mr-8 md:mr-16;
 }
 .banner-numbervalulist li:last-child {
   @apply mr-0;
@@ -66,6 +73,6 @@
 }
 
 .banner-numbervalulist span {
-  @apply text-sm md:text-base tracking-[1px];
+  @apply text-sm md:text-base tracking-wider;
 }
 </style>

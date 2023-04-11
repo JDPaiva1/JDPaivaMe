@@ -18,9 +18,16 @@ document.addEventListener('scroll', () => {
       <!-- logo -->
       <!-- social -->
       <ul class="header-social">
-        <li><a href="#" target="_blank"><i class="ri-github-fill"></i> G </a></li>
-        <li><a href="#" target="_blank"><i class="ri-stack-overflow-line"></i> I </a></li>
-        <li><a href="#" target="_blank"><i class="ri-linkedin-fill"></i> L </a></li>
+        <li>
+          <a href="https://github.com/JDPaiva1" target="_blank">
+            <i class="icon-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/jdpaiva1/" target="_blank">
+            <i class="icon-linkedin"></i>
+          </a>
+        </li>
       </ul>
       <!-- social -->
     </div>
@@ -29,7 +36,7 @@ document.addEventListener('scroll', () => {
 
 <style scoped>
 .header {
-  @apply fixed w-full top-0 z-[5] bg-white transition-all duration-400 ease-in-out delay-0 pt-4 md:py-16 px-0;
+  @apply fixed w-full top-0 z-10 bg-white transition-all duration-400 ease-in-out delay-0 pt-4 md:py-16 px-0;
 }
 
 .header.header--fixed {
@@ -54,18 +61,16 @@ document.addEventListener('scroll', () => {
 }
 
 .header-social li {
-  @apply ml-3;
-}
-
-.header-social li:first-child {
-  @apply ml-0;
+  @apply ml-4 first:ml-0;
 }
 
 .header-social li a {
-  @apply text-white w-6 h-6 bg-primary flex justify-center items-center text-center text-base rounded-full;
+  /* @apply text-white w-6 h-6 bg-primary flex justify-center items-center text-center text-sm rounded-full; */
+  @apply text-primary text-2xl;
 }
 
 .header-social li a:hover {
-  @apply bg-black text-white;
+  /* @apply bg-black text-white; */
+  @apply text-black;
 }
 </style>

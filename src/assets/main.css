@@ -7,13 +7,8 @@ html {
   @apply bg-white;
 }
 body {
-  /* font-family: 'Inter', sans-serif; */
-  /* font-style: normal; */
-  @apply bg-white overflow-x-hidden font-normal text-grey text-sm;
+  @apply bg-white overflow-x-hidden font-normal text-grey-900 text-sm;
 }
-/* @font-face {
-  font-family: 'Inter', sans-serif;
-} */
 
 a,
 a:hover,
@@ -23,7 +18,6 @@ input,
 button,
 input:focus,
 .transition {
-  /* outline: none; */
   @apply no-underline outline-none transition-all duration-400 ease-in-out delay-0 shadow-none;
 }
 a {
@@ -32,23 +26,16 @@ a {
 
 ::-moz-selection,
 ::selection {
-  /* text-shadow: none; */
   @apply bg-black text-white;
 }
 
 img {
-  /* outline: none; */
-  @apply max-w-full h-auto border-none;
+  @apply max-w-full h-auto border-none object-cover;
 }
 
 ul {
   @apply p-0 m-0;
 }
-
-/* 1.2 Typography */
-/* h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
-} */
 
 figure {
   @apply m-0;
@@ -87,10 +74,10 @@ img {
 }
 
 .heading {
-  @apply inline-block font-bold text-black uppercase tracking-[1px] text-base mb-[23px] pb-[7px] border-b-[3px] border-b-primary border-solid;
+  @apply inline-block font-bold text-black uppercase tracking-wider text-base mb-6 pb-2 border-b-[3px] border-b-primary border-solid;
 }
 .button {
-  @apply inline-block uppercase text-xs leading-[13px] font-semibold tracking-[3px] text-primary px-2.5 md:px-[30px] py-[11px] md:py-[17px] rounded-[60px] border-2 border-solid border-primary;
+  @apply inline-block uppercase text-xs leading-3 font-semibold tracking-[3px] text-primary px-2.5 md:px-8 py-3 md:py-4 rounded-full border-2 border-solid border-primary;
 }
 .button:hover {
   @apply bg-primary text-white;
