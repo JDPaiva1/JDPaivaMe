@@ -37,16 +37,16 @@
   @apply flex flex-wrap mt-24 md:mt-[168px];
 }
 .banner-img-section {
-  @apply w-full md:w-2/5 md:pr-3;
+  @apply w-full lg:w-2/5 lg:pr-3;
 }
 .banner figure {
   @apply py-8 md:py-0 w-full;
 }
 .banner-img {
-  @apply object-cover aspect-[0.876] rounded-3xl;
+  @apply object-cover aspect-[0.876] rounded-3xl mx-auto;
 }
 .banner-text-section {
-  @apply w-full md:w-3/5 px-0 md:pl-20 md:pr-28;
+  @apply w-full lg:w-3/5 px-0 lg:pl-20 xl:pr-28;
 }
 
 .banner-title span {

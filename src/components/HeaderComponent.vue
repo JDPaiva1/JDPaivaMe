@@ -12,7 +12,7 @@ document.addEventListener('scroll', () => {
   <header class="header" :class="{'header--fixed': isFixed }">
     <div class="header-inner c-container">
       <!-- logo -->
-      <a href="index.html" class="header-logo">
+      <a href="#" class="header-logo">
         <span>J</span> Jose Daniel Paiva
       </a>
       <!-- logo -->
