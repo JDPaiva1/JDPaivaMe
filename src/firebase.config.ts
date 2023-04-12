@@ -1,8 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
 import { getAnalytics, logEvent } from 'firebase/analytics'
-import { getDatabase } from 'firebase/database'
-
+import { child, get, getDatabase, ref } from 'firebase/database'
 
 // Firebase configuration
 const firebaseConfig = {
@@ -26,4 +25,37 @@ logEvent(analytics, 'notification_received')
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app)
 
-export { app, db, analytics }
+function getKeys(language: string) {
+  const dbRef = ref(db)
+  // get(child(dbRef, language))
+  //   .then((snapshot) => {
+  //     if (snapshot.exists()) {
+  //       console.log(snapshot.val())
+  //       return snapshot.val()
+  //     } else {
+  //       console.log('No data available')
+  //       return {}
+  //     }
+  //   })
+  //   .catch((error) => {
+  //     console.error(error)
+  //     return {}
+  //   })
+  return new Promise((resolve, reject) => {
+    get(child(dbRef, language))
+    .then((snapshot) => {
+      if (snapshot.exists()) {
+        resolve(snapshot.val())
+      } else {
+        console.log('No data available')
+        reject('No data available')
+      }
+    })
+    .catch((error) => {
+      console.error(error)
+      reject(error)
+    })
+  })
+}
+
+export { app, getKeys }

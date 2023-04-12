@@ -1,11 +1,17 @@
+<script setup lang="ts">
+import { inject } from 'vue';
+
+const data = inject('data') as { contact: { email: string, button: string, title: string, subtitle: string, pretitle: string } }
+</script>
+
 <template>
   <footer class="footer text-center">
     <div class="c-container">
       <section>
-        <span>Stay in touch</span>
-        <h4>Ready to talk?</h4>
-        <p>Feel free to contact me</p>
-        <a href="mailto:" class="button">Lets Talk</a>
+        <span>{{ data?.contact?.pretitle }}</span>
+        <h4>{{ data?.contact?.title }}</h4>
+        <p>{{ data?.contact?.subtitle }}</p>
+        <a :href="`mailto:${data?.contact?.email}`" class="button">{{ data?.contact?.button }}</a>
       </section>
       <span class="footer-copyright">
         © {{ new Date().getFullYear() }} <a href="https://jdpaiva.me/">Jose Daniel Paiva</a>
@@ -41,4 +47,5 @@
 
 .footer-copyright a {
   @apply text-grey-500 hover:text-primary;
-}</style>
+}
+</style>

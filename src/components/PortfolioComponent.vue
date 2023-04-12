@@ -1,41 +1,21 @@
+<script setup lang="ts">
+import { inject } from 'vue';
+
+const data = inject('data') as { portfolio: { title: string, seemore: string, projects: [{ title: string, description: string, alt: string, image: string, url: string }] } }
+</script>
+
 <template>
   <div class="work">
-    <h2 class="heading">Latest works</h2>
+    <h2 class="heading"> {{ data?.portfolio?.title }} </h2>
     <div class="work-list-section">
-      <div class="work-list">
+      <div class="work-list" v-for="(work, index) in data?.portfolio?.projects" :key="index">
         <section>
-          <h3 class="work-tilte">Tripy mobile app</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim.
-            Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper
-            venenatis. Aenean malesuada eu orci non sodales. </p>
-          <a href="works-setails.html" class="button">Details</a>
+          <h3 class="work-tilte">{{ work?.title }}</h3>
+          <p>{{ work?.description }}</p>
+          <a :href="work?.url" class="button">{{ data?.portfolio?.seemore }}</a>
         </section>
         <figure>
-          <img loading="lazy" src="https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F1.jpg?alt=media&token=28b20c87-2435-4507-acfe-16543cf0fa01">
-        </figure>
-      </div>
-      <div class="work-list">
-        <section>
-          <h3 class="work-tilte">Hello mobile app</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim.
-            Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper
-            venenatis. Aenean malesuada eu orci non sodales. </p>
-          <a href="works-setails.html" class="button">Details</a>
-        </section>
-        <figure>
-          <img loading="lazy" src="https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F1.jpg?alt=media&token=28b20c87-2435-4507-acfe-16543cf0fa01">
-        </figure>
-      </div>
-      <div class="work-list">
-        <section>
-          <h3 class="work-tilte">Cute cookies app</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim.
-            Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper
-            venenatis. Aenean malesuada eu orci non sodales. </p>
-          <a href="works-setails.html" class="button">Details</a>
-        </section>
-        <figure>
-          <img loading="lazy" src="https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F1.jpg?alt=media&token=28b20c87-2435-4507-acfe-16543cf0fa01">
+          <img loading="lazy" :src="work?.image" :alt="work?.alt">
         </figure>
       </div>
     </div>

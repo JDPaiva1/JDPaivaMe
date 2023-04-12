@@ -1,21 +1,22 @@
+<script setup lang="ts">
+import { inject } from 'vue';
+
+const data = inject('data') as { about: { title: string, description: string, button?: string, link?: string } }
+</script>
+
 <template>
   <div class="about">
     <section>
-      <h2 class="heading">About Me</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis interdum ante a porta blandit. Quisque velit
-        tortor, ultricies in quam ut, luctus convallis metus. Nunc vitae felis rutrum, mattis justo quis, bibendum
-        tellus. Integer bibendum eget dolor nec venenatis. Aliquam erat volutpat. Etiam et est vitae turpis accumsan
-        vulputate. Curabitur et vehicula nisl, eu congue dolor. Vivamus nec hendrerit mi Nulla consequat tempor.
-      </p>
-      <div class="about-button-sec text-center">
-        <a href="#" class="button">Download Resume</a>
+      <h2 class="heading">{{ data?.about?.title }}</h2>
+      <p v-html="data?.about?.description"></p>
+      <div v-if="data?.about?.button" class="text-center">
+        <a :href="data?.about?.link" class="button">{{ data?.about?.button }}</a>
       </div>
     </section>
   </div>
 </template>
 
-<style scoped>
+<style>
 .about {
   @apply py-16 md:pb-28;
 }

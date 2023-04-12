@@ -1,31 +1,22 @@
+<script setup lang="ts">
+import { inject } from 'vue';
+
+const data = inject('data') as { experience: [{ years: string, title: string, company: string, description: string, bulletPoints: Array<string> }] }
+</script>
+
 <template>
   <div class="experience">
     <h2 class="heading">Work Experience</h2>
-    <div class="experience-list-wrapper">
-      <section class="experience-list">
-        <span class="experience-year">2019 - Present</span>
-        <h3 class="experience-officename">Matrix Media Inc</h3>
-        <span class="experience-department">Full Stack developer</span>
+    <div class="experience-list-wrapper" v-if="data?.experience">
+      <section class="experience-list" v-for="(exp, index) in data.experience" :key="index">
+        <span class="experience-year">{{ exp?.years }}</span>
+        <h3 class="experience-officename">{{ exp?.title }}</h3>
+        <span class="experience-department">{{ exp?.company }}</span>
         <p class="experience-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim.
-          Sed fermentum.
+          {{ exp?.description }}
         </p>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        </ul>
-      </section>
-      <section class="experience-list">
-        <span class="experience-year">2018 - 2019</span>
-        <h3 class="experience-officename">Lexind</h3>
-        <span class="experience-department">Senior app developer</span>
-        <p class="experience-description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.
-        </p>
-        <ul>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
+        <ul v-if="exp?.bulletPoints">
+          <li v-for="(point, index) in exp?.bulletPoints" :key="index">{{ point }}</li>
         </ul>
       </section>
     </div>
@@ -36,12 +27,15 @@
 .experience {
   @apply md:pb-24;
 }
+
 .experience-list-wrapper {
   @apply pt-4 flex flex-wrap md:flex-nowrap;
 }
+
 .experience-list {
   @apply w-full md:pr-20 last:pr-0 mb-10 md:mb-0;
 }
+
 .experience-officename {
   @apply text-2xl font-light mb-2.5;
 }
@@ -70,6 +64,7 @@ span.experience-department {
 .experience-list ul li {
   @apply text-base leading-6 font-light relative mb-5 pl-7;
 }
+
 .experience-list ul li::before {
   @apply content-empty absolute w-2 h-2 bg-grey-900 rounded-full left-0 top-2.5;
 }

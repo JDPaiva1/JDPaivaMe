@@ -1,29 +1,19 @@
+<script setup lang="ts">
+import { inject } from 'vue';
+
+const data = inject('data') as { skills: object }
+</script>
+
 <template>
   <div class="skills">
-    <div class="skills-container">
-      <h2 class="heading">Core Skills</h2>
+    <section class="skills-container" v-for="(section, index) in data?.skills" :key="index">
+      <h2 class="heading">{{ index }}</h2>
       <ul class="skills-list">
-        <li>JavaScript</li>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-        <li>Vue.js</li>
-        <li>React</li>
-        <li>Sequelize</li>
-        <li>Github</li>
-        <li>HTML</li>
+        <li v-for="(skill, index) in section" :key="index">
+          {{ skill }}
+        </li>
       </ul>
-    </div>
-    <div class="skills-container">
-      <h2 class="heading">Other Skills</h2>
-      <ul class="skills-list">
-        <li>Storyblok</li>
-        <li>PWAs</li>
-        <li>Responsive Web Design</li>
-        <li>React</li>
-        <li>Vuetify</li>
-      </ul>
-    </div>
+    </section>
   </div>
 </template>
 
