@@ -9,7 +9,7 @@ import FooterComponent from '@/components/FooterComponent.vue';
 </script>
 
 <template>
-  <HeaderComponent ref="headerRef"/>
+  <HeaderComponent />
 
   <main class="c-container">
     <BannerComponent />
@@ -22,5 +22,4 @@ import FooterComponent from '@/components/FooterComponent.vue';
   <FooterComponent />
 </template>
 
-<style>
-</style>
+<style></style>

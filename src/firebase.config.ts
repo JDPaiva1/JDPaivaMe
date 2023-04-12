@@ -1,10 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+import { getAnalytics, logEvent } from 'firebase/analytics'
 import { getDatabase } from 'firebase/database'
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Firebase configuration
 const firebaseConfig = {
@@ -20,8 +18,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
+
 // Initialize Analytics
 const analytics = getAnalytics(app)
+logEvent(analytics, 'notification_received')
+
 // Initialize Realtime Database and get a reference to the service
 const db = getDatabase(app)
 
