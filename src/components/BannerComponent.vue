@@ -17,12 +17,12 @@ const data = inject('data') as { main: { greetings: string, numbervalulist: obje
     </div>
     <section class="banner-text-section">
       <h1 class="banner-title" v-html="data?.main?.greetings"></h1>
-      <ul class="banner-numbervalulist">
+      <!-- <ul class="banner-numbervalulist">
         <li v-for="(value, index) in data?.main?.numbervalulist" :key="index">
           <strong>{{ value }}</strong>
           <span>{{ index }}</span>
         </li>
-      </ul>
+      </ul> -->
     </section>
   </div>
 </template>
