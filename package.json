@@ -15,7 +15,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "firebase": "^10.7.2",
+    "firebase": "^10.8.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
