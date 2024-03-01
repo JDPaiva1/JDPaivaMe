@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages dependencies preinstalled
+name: Deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -40,12 +40,12 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "18.19"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci
-      - name: Static HTML export with Vite
+      - name: Build project
         run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
