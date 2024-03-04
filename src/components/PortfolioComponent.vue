@@ -28,7 +28,7 @@ const data = inject('data') as { portfolio: { title: string, seemore: string, pr
 }
 
 .work-list {
-  @apply bg-divider mb-10 p-7 md:py-10 md:px-16 flex flex-wrap lg:flex-nowrap;
+  @apply bg-divider mb-10 p-7 rounded-sm md:py-10 md:px-16 flex flex-wrap lg:flex-nowrap;
 }
 
 .work-list section {
@@ -40,7 +40,7 @@ const data = inject('data') as { portfolio: { title: string, seemore: string, pr
 }
 
 .work-list figure img {
-  @apply w-auto h-full mx-auto;
+  @apply w-auto h-full mx-auto rounded-sm;
 }
 
 .work-tilte {
