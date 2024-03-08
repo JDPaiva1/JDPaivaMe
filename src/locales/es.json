@@ -1,7 +1,7 @@
 {
   "about": {
     "button": "Ver mi perfil en Platzi",
-    "description": "Soy un joven programador amante de la tecnología 💻 y un <a href=\"https://platzi.com/p/jdpaiva1/\" target=\"_blank\">estudiante en Platzi</a> que siempre está ansioso por aprender algo nuevo, tengo experiencia en el desarrollo de aplicaciones web principalmente con JavaScript y TypeScript, utilizando tecnologías como Vue.js, TailwindCSS, Firebase, React.js y Node.js.",
+    "description": "Soy un joven programador amante de la tecnología 💻 y un estudiante en Platzi que siempre está ansioso por aprender algo nuevo, tengo experiencia en el desarrollo de aplicaciones web principalmente con JavaScript y TypeScript, utilizando tecnologías como Vue.js, TailwindCSS, Firebase, React.js y Node.js.",
     "title": "sobre mí",
     "link": "https://platzi.com/p/jdpaiva1/"
   },

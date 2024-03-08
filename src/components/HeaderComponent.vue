@@ -20,11 +20,13 @@ document.addEventListener('scroll', () => {
       <ul class="header-social">
         <li>
           <a href="https://github.com/JDPaiva1" target="_blank">
+            <span class="sr-only">Jose Daniel Paiva's GitHub</span>
             <i class="icon-github"></i>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/in/jdpaiva1/" target="_blank">
+            <span class="sr-only">Jose Daniel Paiva's Linkedin</span>
             <i class="icon-linkedin"></i>
           </a>
         </li>

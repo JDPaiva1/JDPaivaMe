@@ -1,7 +1,7 @@
 {
   "about": {
     "button": "See my Platzi profile",
-    "description": "I'm a tech-lover young programmer 💻 and a <a href=\"https://platzi.com/p/jdpaiva1/\" target=\"_blank\">student at Platzi</a> who's always hungry to learn something new, have experience developing web apps primarily using JavaScript and TypeScript, and utilizing technologies such as Vue.js, TailwindCSS, Firebase, React.js and Node.js.",
+    "description": "I'm a tech-lover young programmer 💻 and a student at Platzi who's always hungry to learn something new, have experience developing web apps primarily using JavaScript and TypeScript, and utilizing technologies such as Vue.js, TailwindCSS, Firebase, React.js and Node.js.",
     "title": "about me",
     "link": "https://platzi.com/p/jdpaiva1/"
   },
@@ -73,7 +73,7 @@
         "url": "https://lospostresdemama1.web.app/"
       }
     ],
-    "seemore": "See more",
+    "seemore": "Go to the website",
     "title": "Portfolio"
   },
   "skills": {
