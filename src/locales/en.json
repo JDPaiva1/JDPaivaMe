@@ -1,0 +1,96 @@
+{
+  "about": {
+    "button": "See my Platzi profile",
+    "description": "I'm a tech-lover young programmer 💻 and a <a href=\"https://platzi.com/p/jdpaiva1/\" target=\"_blank\">student at Platzi</a> who's always hungry to learn something new, have experience developing web apps primarily using JavaScript and TypeScript, and utilizing technologies such as Vue.js, TailwindCSS, Firebase, React.js and Node.js.",
+    "title": "about me",
+    "link": "https://platzi.com/p/jdpaiva1/"
+  },
+  "contact": {
+    "button": "Let's talk",
+    "email": "josedaniel@jdpaiva.me",
+    "pretitle": "Stay in touch",
+    "subtitle": "Feel free to contact me",
+    "title": "Ready to talk?"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "items": [
+      {
+        "company": "CodeBay Innovation",
+        "description": "Maintenance and refactoring of web applications using HTML, CSS, JavaScript, TypeScript, Vue.js and Tailwind CSS.",
+        "title": "Frontend Developer",
+        "years": "2021 - Present"
+      },
+      {
+        "company": "enlosaltos.com",
+        "description": "Design and programming of web applications.",
+        "title": "Web Developer",
+        "years": "2017 - 2018"
+      }
+    ]
+  },
+  "main": {
+    "greetings": "<span>Hellos</span> I’m Jose Daniel Paiva <br /> Frontend Developer based in Spain.",
+    "numbervalulist": {
+      "Experience": "2+"
+    }
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "alt": "website of HairWorld",
+        "description": "Experience a modern and minimalistic website built with HTML, CSS, and JS. This mock site features a clean and easy-to-use interface with a simple navigation bar and responsive layout. Perfect for browsing on-the-go or finding inspiration.",
+        "title": "HairWorld",
+        "image": "https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F1.jpg?alt=media&token=28b20c87-2435-4507-acfe-16543cf0fa01",
+        "url": "https://jdpaiva1.github.io/HairWorld/"
+      },
+      {
+        "alt": "website of Rick and Morty",
+        "description": "a dynamic web application built with Vue.js, Bootstrap, and the Rick and Morty API that allows users to explore information about their favorite characters and locations",
+        "title": "Rick And Morty",
+        "image": "https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F6.jpg?alt=media&token=223c6a45-83e0-41bb-a242-9d17f9b54de2",
+        "url": "https://jdpaiva1.github.io/RickAndMorty/"
+      },
+      {
+        "alt": "website of Invie",
+        "description": "Unlock your musical potential with the innovative website for the invisible guitar. Built with HTML, CSS, and JS, this mock site features a futuristic interface, stunning visuals, and easy-to-navigate sections. With a responsive layout optimized for desktop and mobile devices, you can experience the magic of music anytime, anywhere, and without any physical limitations.",
+        "title": "Invie - Your best guitars",
+        "image": "https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F3.jpg?alt=media&token=ada13f33-9b4e-4cf4-9f5b-af1912cd3eea",
+        "url": "https://jdpaiva1.github.io/Invie/"
+      },
+      {
+        "alt": "website of En Los Salias",
+        "description": "Discover the latest trends and breaking news in the world of online magazines with this modern and dynamic website. Built with HTML, CSS, and JS, this mock site features a sleek and user-friendly interface, intuitive menu bar, and dynamic slideshow. With a responsive layout optimized for desktop and mobile devices, you can access the site on-the-go and never miss an important update.",
+        "title": "A.C. En Los Salias",
+        "image": "https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F4.jpg?alt=media&token=424e231d-057a-4596-9e8e-b815372163ff",
+        "url": "https://jdpaiva1.github.io/EnLosSalias/"
+      },
+      {
+        "alt": "website of Los Postres de Mamá",
+        "description": "Indulge in the sweet treats of the season with this delectable web app developed with Vue.js and Bootstrap for a cake shop.",
+        "title": "Los Postres de Mamá",
+        "image": "https://firebasestorage.googleapis.com/v0/b/jdpaiva1-me.appspot.com/o/portfolio%2F5.jpg?alt=media&token=a0131cb3-2927-4685-9949-e0bd34ea1128",
+        "url": "https://lospostresdemama1.web.app/"
+      }
+    ],
+    "seemore": "See more",
+    "title": "Portfolio"
+  },
+  "skills": {
+    "core skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue.js",
+      "Git",
+      "TailwindCSS",
+      "Firebase"
+    ],
+    "other skills": [
+      "Storybook",
+      "Node.js",
+      "Sass",
+      "Bootstrap"
+    ]
+  }
+}

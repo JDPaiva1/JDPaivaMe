@@ -8,17 +8,15 @@ import PortfolioComponent from '@/components/PortfolioComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 
 import { provide, ref } from 'vue'
-import { getKeys } from '@/firebase.config'
 
-// const lang = window.location.pathname === '/' ? 'en' : 'es'
+import en from '@/locales/en.json'
+import es from '@/locales/es.json'
+
 const data = ref({})
 provide('data', data)
 
-getKeys('test').then(snapshot => {
-  data.value = snapshot as object
-}).catch(error => {
-  console.log('app error', error);
-})
+data.value = window.location.pathname.startsWith('/es') ? es : en;
+
 </script>
 
 <template>

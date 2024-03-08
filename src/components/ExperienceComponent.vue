@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { inject } from 'vue';
 
-const data = inject('data') as { experience: [{ years: string, title: string, company: string, description: string, bulletPoints: Array<string> }] }
+const data = inject('data') as {
+  experience: {
+    title: string,
+    items: [{ years: string, title: string, company: string, description: string, bulletPoints: Array<string> }]
+  } }
 </script>
 
 <template>
   <div class="experience">
-    <h2 class="heading">Work Experience</h2>
-    <div class="experience-list-wrapper" v-if="data?.experience">
-      <section class="experience-list" v-for="(exp, index) in data.experience" :key="index">
+    <h2 class="heading">{{ data?.experience?.title }}</h2>
+    <div class="experience-list-wrapper" v-if="data?.experience?.items?.length > 0">
+      <section class="experience-list" v-for="(exp, index) in data.experience.items" :key="index">
         <span class="experience-year">{{ exp?.years }}</span>
         <h3 class="experience-officename">{{ exp?.title }}</h3>
         <span class="experience-department">{{ exp?.company }}</span>
