@@ -30,7 +30,7 @@
     ]
   },
   "main": {
-    "greetings": "<span>Hellos</span> I’m Jose Daniel Paiva <br /> Frontend Developer based in Spain.",
+    "greetings": "<span>Hello</span> I’m Jose Daniel Paiva <br /> Frontend Developer based in Spain.",
     "numbervalulist": {
       "Experience": "2+"
     }
