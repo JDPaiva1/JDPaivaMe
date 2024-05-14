@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-import { getAnalytics, logEvent } from 'firebase/analytics'
 
 // Firebase configuration
 const firebaseConfig = {
@@ -16,9 +15,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)
-
-// Initialize Analytics
-const analytics = getAnalytics(app)
-logEvent(analytics, 'notification_received')
 
 export { app }

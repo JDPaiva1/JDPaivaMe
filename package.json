@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "firebase": "^10.12.0",
+    "posthog-js": "^1.131.4",
     "vue": "^3.2.45"
   },
   "devDependencies": {
