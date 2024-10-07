@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "posthog-js": "^1.154.2",
-    "vue": "^3.2.45"
+    "vue": "^3.5.11"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.4",
