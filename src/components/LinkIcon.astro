@@ -44,8 +44,10 @@ const finalUrl = url || icon.href;
   rel={name !== 'email' ? 'noopener noreferrer' : undefined}
   class={`rounded-full ${icon.bgColor} p-2 text-white transition-colors ${icon.hoverColor}`}
   aria-label={name.charAt(0).toUpperCase() + name.slice(1)}
+  data-ph-capture-attribute-url={name}
 >
   <svg
+    data-ph-capture-attribute-svg-name={name}
     xmlns="http://www.w3.org/2000/svg"
     width={size}
     height={size}
