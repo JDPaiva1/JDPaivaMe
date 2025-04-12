@@ -8,8 +8,6 @@ Personal website built with [Astro](https://astro.build) and [TailwindCSS](https
 - [TailwindCSS](https://tailwindcss.com) - CSS framework
 - GitHub Pages - Hosting
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
 ### Prerequisites
 
 - Node.js >= 22.14.0
