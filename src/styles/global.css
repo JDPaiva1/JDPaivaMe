@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import '../assets/fonts.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
