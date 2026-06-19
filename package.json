@@ -14,8 +14,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.18.0",
-    "@tailwindcss/vite": "^4.2.1",
-    "tailwindcss": "^4.2.1"
+    "astro": "^6.4.8",
+    "@tailwindcss/vite": "^4.3.1",
+    "tailwindcss": "^4.3.1"
   }
 }
